@@ -1,0 +1,122 @@
+:root {
+    --background : #ddd;
+    --primary : #313131;
+    --second : #575fcf;
+    --minute : #34e7e4;
+    --hour : #ffdd59;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background: var(--background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.clock-div {
+	background: var(--primary);
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	box-shadow: 3px 3px 5px #00000042;
+	outline: none;
+	border: 5px solid white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transform: rotate(-90deg);
+}
+
+.second {
+	width: 100px;
+	height: 2px;
+	background: var(--second);
+	transform: translateX(30%);
+	transform-origin: 20% 50%;
+	position: absolute;
+	z-index: 10;
+}
+.minute {
+	width: 90px;
+	height: 4px;
+	background: var(--minute);
+	position: absolute;
+	transform: translateX(30%);
+	z-index: 5;
+	transform-origin: 20% 50%;
+}
+
+
+.hour {
+	width: 80px;
+	height: 7px;
+	background: var(--hour);
+	transform: translateX(30%);
+	transform-origin: 20% 50%;
+	z-index: 1;
+}
+
+.point {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: var(--background);
+	z-index: 100;
+	border-radius: 50%;
+	border: 2px solid var(--second);
+}
+
+.clock-div li {
+	width: 96%;
+	height: 5px;
+	list-style: none;
+	background: lime;
+	position: absolute;
+}
+
+.li-1 {
+	transform: rotate(90deg);
+}
+.li-3 {
+	height: 1px !important;
+	transform: rotate(30deg);
+	background: var(--background) !important;
+}
+.li-4 {
+	height: 1px !important;
+	transform: rotate(60deg);
+	background: var(--background) !important;
+}
+.li-5 {
+	height: 1px !important;
+	transform: rotate(120deg);
+	background: var(--background) !important;
+}
+
+.li-6 {
+	height: 1px !important;
+	transform: rotate(150deg);
+	background: var(--background) !important;
+}
+.circle {
+	width: 82%;
+	height: 82%;
+	border-radius: 50%;
+	position: absolute;
+	background: var(--primary);
+}
+
+
+
+
